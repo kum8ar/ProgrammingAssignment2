@@ -2,8 +2,8 @@
 ## functions do
 ###
 
-## Write a short comment describing this function
-
+##This function  makeCacheMatrix creates a special "matrix" object that can cache its inverse
+## this cache  R function is able to cache potentially time-consuming computations and saves time
 makeCacheMatrix <- function(x = matrix()) {
   
   inv <- NULL
@@ -22,6 +22,10 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
+##This function computes the inverse of the special "matrix" returned by makeCacheMatrix above. 
+##If the inverse has already been calculated (and the matrix has not changed), 
+###then the cachesolve should retrieve the inverse from the cache.
+##Computing the inverse of a square is done with the solve(X) function in R
 
 cacheSolve <- function(x, ...) {
   
